@@ -1,0 +1,8 @@
+- Let's say i have my web application which is speciically running in a container, all the default configurations required w.r.t the port and the requirements that needs to be installed before we run it as a container everything is put up over here in a specific docker file.
+- Docker file is present there.
+- Now let's consider that this web application wants to use services like MySQL , Redis , MongoDb ,--> when u go to docker hub u will be finding different different images for MySQL , Redis and MongoDb , out of these images some may not be compatible for the application , so it might not be possible to run MySQL inside this container , hence MySQL , Redis , MongoDb all needs to be running as a seperate container. Then the web application can specifically interact with MySQL , Redis , MongoDb to store or retrieve the data.
+- Redis is basically used for caching purpose which will specifically increase the performance of ur website.
+
+## Why exactly is Docker Compose Used ??
+- Docker compose is a tool for defining and running multicontainer docker applications.
+- In the above scenario as u can see u have multiple containers , u have MySQL container , Redis Container , MongoDb container , with the help of docker compose we will define the entire configuration , we will create a file called as Docker-Compose.yaml file , and then we can join down all the configurations requirements that is basically used to run all these multicontainers and they will also be able to communicate with each other.
